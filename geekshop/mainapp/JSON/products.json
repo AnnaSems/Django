@@ -1,0 +1,29 @@
+[
+    {
+        "category_id": 1,
+        "description": "Расположитесь комфортно",
+        "id": 1,
+        "image": "products_img/stol_obedenniy_raskladnoy_dub.jpg",
+        "name": "Стол",
+        "price": 6500.99,
+        "quantity": 20
+    },
+    {
+        "category_id": 1,
+        "description": "Само совершенство",
+        "id": 2,
+        "image": "products_img/ae8d5bb7cc378fca264f5bd7b0439c0d.jpg.png",
+        "name": "Стул",
+        "price": 2700,
+        "quantity": 4
+    },
+    {
+        "category_id": 1,
+        "description": "Для удовольствия",
+        "id": 3,
+        "image": "products_img/fmdhdcw.1200x1200.jpg",
+        "name": "Кухонный гарнитур",
+        "price": 3000,
+        "quantity": 2
+    }
+]
