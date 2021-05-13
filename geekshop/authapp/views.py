@@ -27,10 +27,6 @@ def logout(request):
     return HttpResponseRedirect(reverse('index'))
 
 
-def edit(request):
-    return HttpResponseRedirect(reverse('index'))
-
-
 def register(request):
     title = 'регистрация'
 
