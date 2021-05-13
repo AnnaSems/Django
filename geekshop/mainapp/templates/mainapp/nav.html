@@ -1,7 +1,7 @@
 <a href="index.html" class="logo"></a>
 <ul class="menu">
   <li><a href="{% url 'index' %}" class="active">домой</a></li>
-  <li><a href="{% url 'products' %}">продукты</a></li>
+  <li><a href="{% url 'category' 0 %}">продукты</a></li>
   <li><a href="{% url 'contact' %}">контакты</a></li>
   {% if user.is_authenticated %}
   <li>
@@ -17,6 +17,12 @@
     <a href="{% url 'auth:login' %}">войти</a>
     {% endif %}
   </li>
-
+  <li><a href="{% url 'basket:view' %}" class="basket">
+      Корзина
+      <span>
+        {% if basket %} {{ basket|length }} {% endif %}
+      </span>
+    </a></li>
 </ul>
+
 <a href="#" class="search"></a>
