@@ -17,12 +17,16 @@
     <a href="{% url 'auth:login' %}">войти</a>
     {% endif %}
   </li>
-  <li><a href="{% url 'basket:view' %}" class="basket">
-      Корзина
+  <li>
+    <a href="{% url 'basket:view' %}" class="basket">
+      <img src="../../../media/basket/cart-148964_640.png" alt="basket">
       <span>
-        {% if basket %} {{ basket|length }} {% endif %}
+        {% if basket %}
+        {{ basket.0.total_cost|floatformat:0 }} руб
+        ({{ basket.0.total_quantity }} шт)
+        {% endif %}
       </span>
-    </a></li>
+    </a>
+  </li>
+  <li><a href="#" class="search"></a></li>
 </ul>
-
-<a href="#" class="search"></a>
