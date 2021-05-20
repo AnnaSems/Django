@@ -77,14 +77,15 @@ html, body {
 	height: 23px;	
 	background-image: url(img/search.png);
 	position: absolute;
+	background-repeat: no-repeat;
 	top: 63px;
 	left: 1176px;
 }
 .basket {
 	display: block;
-	width: 23px;
-	height: 23px;	
-	background-image: url(img/basket.png);
+	/* width: 23px;
+	height: 23px;	 */
+	/* background-image: url(../media/backet/cart-148964_640.png); */
 	position: absolute;
 	top: 63px;
 	left: 1210px;
@@ -1069,4 +1070,21 @@ td:first-child {
 }
 .related-products a:hover .text{
 	display: block;
+}
+
+.menu li img{
+	width: 25px;
+	margin-left: 15px;
+	margin-top: -15px;
+}
+
+.menu li:last-child{
+	width: 25px;
+}
+.menu a:last-child{
+	padding: 7px;
+}
+
+.basket_record img{
+	width: 150px;
 }
