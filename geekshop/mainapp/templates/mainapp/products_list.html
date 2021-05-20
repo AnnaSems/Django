@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Каталог</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome/css/font-awesome.css' %}">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="hero-white">
+        <div class="header clearfix">
+          {% include './nav.html' %}
+          <a href="#" class="basket"></a>
+        </div>
+      </div>
+
+      <div class="details">
+        <div class="links clearfix">
+          {% include './categories_menu.html' %}
+        </div>
+
+        <div class="products_list">
+          <div class="title clearfix">
+            <h2>
+              Категория: "{{ category.name|title }}"
+            </h2>
+          </div>
+          <div class="category-products clearfix">
+
+            {% for product in products %}
+            <div class="block">
+              <a href="{% url 'basket:add' product.pk %}">
+                <img src="/media/{{ product.image }}" alt="product">
+                <div class="text">
+                  <img src="{% static 'img/icon-hover.png' %}" alt="hover">
+                  <h4>{{ product.name }}</h4>
+                  <p>{{ product.description }}</p>
+                </div>
+              </a>
+            </div>
+            {% endfor %}
+
+          </div>
+        </div>
+      </div>
+
+      <div class="clr"></div>
+  </body>
+
+</html>

@@ -23,7 +23,8 @@ from mainapp import urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(urls))
+    path('', include(urls)),
+    path('basket/', include('basketapp.urls', namespace='basket')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
